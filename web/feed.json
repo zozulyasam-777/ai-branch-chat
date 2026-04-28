@@ -1,0 +1,306 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "New Session",
+  "items": [
+    {
+      "id": "486a403f",
+      "title": "[main] user",
+      "content_text": "Hello, I have a headache.",
+      "date_published": "2026-04-28T15:30:20.161194",
+      "tags": [
+        "branch:main",
+        "role:user"
+      ]
+    },
+    {
+      "id": "486a403f",
+      "title": "[branch_flu] user",
+      "content_text": "Hello, I have a headache.",
+      "date_published": "2026-04-28T15:30:20.161194",
+      "tags": [
+        "branch:branch_flu",
+        "role:user"
+      ]
+    },
+    {
+      "id": "486a403f",
+      "title": "[flu] user",
+      "content_text": "Hello, I have a headache.",
+      "date_published": "2026-04-28T15:30:20.161194",
+      "tags": [
+        "branch:flu",
+        "role:user"
+      ]
+    },
+    {
+      "id": "9f06af7a",
+      "title": "[main] assistant",
+      "content_text": "Based on your symptoms, it could be ORVI or Flu. Shall we explore ORVI first?",
+      "date_published": "2026-04-28T15:30:20.162196",
+      "tags": [
+        "branch:main",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "9f06af7a",
+      "title": "[branch_flu] assistant",
+      "content_text": "Based on your symptoms, it could be ORVI or Flu. Shall we explore ORVI first?",
+      "date_published": "2026-04-28T15:30:20.162196",
+      "tags": [
+        "branch:branch_flu",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "9f06af7a",
+      "title": "[flu] assistant",
+      "content_text": "Based on your symptoms, it could be ORVI or Flu. Shall we explore ORVI first?",
+      "date_published": "2026-04-28T15:30:20.162196",
+      "tags": [
+        "branch:flu",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "b4b01d4f",
+      "title": "[main] user",
+      "content_text": "Yes.",
+      "date_published": "2026-04-28T15:31:55.696605",
+      "tags": [
+        "branch:main",
+        "role:user"
+      ]
+    },
+    {
+      "id": "b4b01d4f",
+      "title": "[branch_flu] user",
+      "content_text": "Yes.",
+      "date_published": "2026-04-28T15:31:55.696605",
+      "tags": [
+        "branch:branch_flu",
+        "role:user"
+      ]
+    },
+    {
+      "id": "b4b01d4f",
+      "title": "[flu] user",
+      "content_text": "Yes.",
+      "date_published": "2026-04-28T15:31:55.696605",
+      "tags": [
+        "branch:flu",
+        "role:user"
+      ]
+    },
+    {
+      "id": "507eb181",
+      "title": "[main] assistant",
+      "content_text": "I understand. Let's continue exploring this branch.",
+      "date_published": "2026-04-28T15:31:55.697595",
+      "tags": [
+        "branch:main",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "507eb181",
+      "title": "[branch_flu] assistant",
+      "content_text": "I understand. Let's continue exploring this branch.",
+      "date_published": "2026-04-28T15:31:55.697595",
+      "tags": [
+        "branch:branch_flu",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "507eb181",
+      "title": "[flu] assistant",
+      "content_text": "I understand. Let's continue exploring this branch.",
+      "date_published": "2026-04-28T15:31:55.697595",
+      "tags": [
+        "branch:flu",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "04a6d587",
+      "title": "[main] user",
+      "content_text": "mybe I flu",
+      "date_published": "2026-04-28T15:34:09.519768",
+      "tags": [
+        "branch:main",
+        "role:user"
+      ]
+    },
+    {
+      "id": "04a6d587",
+      "title": "[branch_flu] user",
+      "content_text": "mybe I flu",
+      "date_published": "2026-04-28T15:34:09.519768",
+      "tags": [
+        "branch:branch_flu",
+        "role:user"
+      ]
+    },
+    {
+      "id": "04a6d587",
+      "title": "[flu] user",
+      "content_text": "mybe I flu",
+      "date_published": "2026-04-28T15:34:09.519768",
+      "tags": [
+        "branch:flu",
+        "role:user"
+      ]
+    },
+    {
+      "id": "6cb6b335",
+      "title": "[main] assistant",
+      "content_text": "Flu usually starts suddenly with high fever. Rest is crucial. Check saturation.",
+      "date_published": "2026-04-28T15:34:09.521072",
+      "tags": [
+        "branch:main",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "6cb6b335",
+      "title": "[branch_flu] assistant",
+      "content_text": "Flu usually starts suddenly with high fever. Rest is crucial. Check saturation.",
+      "date_published": "2026-04-28T15:34:09.521072",
+      "tags": [
+        "branch:branch_flu",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "6cb6b335",
+      "title": "[flu] assistant",
+      "content_text": "Flu usually starts suddenly with high fever. Rest is crucial. Check saturation.",
+      "date_published": "2026-04-28T15:34:09.521072",
+      "tags": [
+        "branch:flu",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "5318c2ac",
+      "title": "[branch_flu] user",
+      "content_text": "And if that flu, what different simthops?",
+      "date_published": "2026-04-28T15:42:13.380627",
+      "tags": [
+        "branch:branch_flu",
+        "role:user"
+      ]
+    },
+    {
+      "id": "06c7e2f2",
+      "title": "[branch_flu] assistant",
+      "content_text": "Flu usually starts suddenly with high fever. Rest is crucial. Check saturation.",
+      "date_published": "2026-04-28T15:42:13.382158",
+      "tags": [
+        "branch:branch_flu",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "c7603f53",
+      "title": "[main] user",
+      "content_text": "Hi, I'm not feeling well, my head hurts, what could it be?",
+      "date_published": "2026-04-28T16:14:40.312801",
+      "tags": [
+        "branch:main",
+        "role:user"
+      ]
+    },
+    {
+      "id": "c7603f53",
+      "title": "[flu] user",
+      "content_text": "Hi, I'm not feeling well, my head hurts, what could it be?",
+      "date_published": "2026-04-28T16:14:40.312801",
+      "tags": [
+        "branch:flu",
+        "role:user"
+      ]
+    },
+    {
+      "id": "e7f579ce",
+      "title": "[main] assistant",
+      "content_text": "Based on your symptoms, it could be ORVI or Flu. Shall we explore ORVI first?",
+      "date_published": "2026-04-28T16:14:40.314626",
+      "tags": [
+        "branch:main",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "e7f579ce",
+      "title": "[flu] assistant",
+      "content_text": "Based on your symptoms, it could be ORVI or Flu. Shall we explore ORVI first?",
+      "date_published": "2026-04-28T16:14:40.314626",
+      "tags": [
+        "branch:flu",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "468fc177",
+      "title": "[main] user",
+      "content_text": "Yes, let's start with the orvi",
+      "date_published": "2026-04-28T16:16:20.544097",
+      "tags": [
+        "branch:main",
+        "role:user"
+      ]
+    },
+    {
+      "id": "468fc177",
+      "title": "[flu] user",
+      "content_text": "Yes, let's start with the orvi",
+      "date_published": "2026-04-28T16:16:20.544097",
+      "tags": [
+        "branch:flu",
+        "role:user"
+      ]
+    },
+    {
+      "id": "b5f722ee",
+      "title": "[main] assistant",
+      "content_text": "For ORVI, check your throat and keep a temperature diary. Drink plenty of fluids.",
+      "date_published": "2026-04-28T16:16:20.545738",
+      "tags": [
+        "branch:main",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "b5f722ee",
+      "title": "[flu] assistant",
+      "content_text": "For ORVI, check your throat and keep a temperature diary. Drink plenty of fluids.",
+      "date_published": "2026-04-28T16:16:20.545738",
+      "tags": [
+        "branch:flu",
+        "role:assistant"
+      ]
+    },
+    {
+      "id": "aadf3ad3",
+      "title": "[flu] user",
+      "content_text": "Maybe I do have a flu?",
+      "date_published": "2026-04-28T16:18:00.711498",
+      "tags": [
+        "branch:flu",
+        "role:user"
+      ]
+    },
+    {
+      "id": "21d49012",
+      "title": "[flu] assistant",
+      "content_text": "Flu usually starts suddenly with high fever. Rest is crucial. Check saturation.",
+      "date_published": "2026-04-28T16:18:00.713669",
+      "tags": [
+        "branch:flu",
+        "role:assistant"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+
+# Secrets
+.env
+config.json 
+
+# Local Data
+data/session.json

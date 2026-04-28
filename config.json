@@ -1,0 +1,10 @@
+{
+  "project_name": "AI Branching Chat",
+  "version": "0.1.0",
+  "storage_path": "data/",
+  "export_path": "web/",
+  "ai_provider": "mock", 
+  "api_key": "", 
+  "model": "gpt-4",
+  "default_branch": "main"
+}

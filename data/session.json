@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "title": "New Session",
+    "created_at": "2026-04-28T15:29:25.854343",
+    "current_branch": "main"
+  },
+  "branches": {
+    "main": {
+      "forked_from": null,
+      "nodes": [
+        {
+          "id": "486a403f",
+          "parent_id": null,
+          "role": "user",
+          "content": "Hello, I have a headache.",
+          "timestamp": "2026-04-28T15:30:20.161194",
+          "metadata": {}
+        },
+        {
+          "id": "9f06af7a",
+          "parent_id": "486a403f",
+          "role": "assistant",
+          "content": "Based on your symptoms, it could be ORVI or Flu. Shall we explore ORVI first?",
+          "timestamp": "2026-04-28T15:30:20.162196",
+          "metadata": {}
+        },
+        {
+          "id": "b4b01d4f",
+          "parent_id": "9f06af7a",
+          "role": "user",
+          "content": "Yes.",
+          "timestamp": "2026-04-28T15:31:55.696605",
+          "metadata": {}
+        },
+        {
+          "id": "507eb181",
+          "parent_id": "b4b01d4f",
+          "role": "assistant",
+          "content": "I understand. Let's continue exploring this branch.",
+          "timestamp": "2026-04-28T15:31:55.697595",
+          "metadata": {}
+        },
+        {
+          "id": "04a6d587",
+          "parent_id": "507eb181",
+          "role": "user",
+          "content": "mybe I flu",
+          "timestamp": "2026-04-28T15:34:09.519768",
+          "metadata": {}
+        },
+        {
+          "id": "6cb6b335",
+          "parent_id": "04a6d587",
+          "role": "assistant",
+          "content": "Flu usually starts suddenly with high fever. Rest is crucial. Check saturation.",
+          "timestamp": "2026-04-28T15:34:09.521072",
+          "metadata": {}
+        },
+        {
+          "id": "c7603f53",
+          "parent_id": "6cb6b335",
+          "role": "user",
+          "content": "Hi, I'm not feeling well, my head hurts, what could it be?",
+          "timestamp": "2026-04-28T16:14:40.312801",
+          "metadata": {}
+        },
+        {
+          "id": "e7f579ce",
+          "parent_id": "c7603f53",
+          "role": "assistant",
+          "content": "Based on your symptoms, it could be ORVI or Flu. Shall we explore ORVI first?",
+          "timestamp": "2026-04-28T16:14:40.314626",
+          "metadata": {}
+        },
+        {
+          "id": "468fc177",
+          "parent_id": "e7f579ce",
+          "role": "user",
+          "content": "Yes, let's start with the orvi",
+          "timestamp": "2026-04-28T16:16:20.544097",
+          "metadata": {}
+        },
+        {
+          "id": "b5f722ee",
+          "parent_id": "468fc177",
+          "role": "assistant",
+          "content": "For ORVI, check your throat and keep a temperature diary. Drink plenty of fluids.",
+          "timestamp": "2026-04-28T16:16:20.545738",
+          "metadata": {}
+        }
+      ]
+    },
+    "branch_flu": {
+      "forked_from": "main",
+      "nodes": [
+        {
+          "id": "486a403f",
+          "parent_id": null,
+          "role": "user",
+          "content": "Hello, I have a headache.",
+          "timestamp": "2026-04-28T15:30:20.161194",
+          "metadata": {}
+        },
+        {
+          "id": "9f06af7a",
+          "parent_id": "486a403f",
+          "role": "assistant",
+          "content": "Based on your symptoms, it could be ORVI or Flu. Shall we explore ORVI first?",
+          "timestamp": "2026-04-28T15:30:20.162196",
+          "metadata": {}
+        },
+        {
+          "id": "b4b01d4f",
+          "parent_id": "9f06af7a",
+          "role": "user",
+          "content": "Yes.",
+          "timestamp": "2026-04-28T15:31:55.696605",
+          "metadata": {}
+        },
+        {
+          "id": "507eb181",
+          "parent_id": "b4b01d4f",
+          "role": "assistant",
+          "content": "I understand. Let's continue exploring this branch.",
+          "timestamp": "2026-04-28T15:31:55.697595",
+          "metadata": {}
+        },
+        {
+          "id": "04a6d587",
+          "parent_id": "507eb181",
+          "role": "user",
+          "content": "mybe I flu",
+          "timestamp": "2026-04-28T15:34:09.519768",
+          "metadata": {}
+        },
+        {
+          "id": "6cb6b335",
+          "parent_id": "04a6d587",
+          "role": "assistant",
+          "content": "Flu usually starts suddenly with high fever. Rest is crucial. Check saturation.",
+          "timestamp": "2026-04-28T15:34:09.521072",
+          "metadata": {}
+        },
+        {
+          "id": "5318c2ac",
+          "parent_id": "6cb6b335",
+          "role": "user",
+          "content": "And if that flu, what different simthops?",
+          "timestamp": "2026-04-28T15:42:13.380627",
+          "metadata": {}
+        },
+        {
+          "id": "06c7e2f2",
+          "parent_id": "5318c2ac",
+          "role": "assistant",
+          "content": "Flu usually starts suddenly with high fever. Rest is crucial. Check saturation.",
+          "timestamp": "2026-04-28T15:42:13.382158",
+          "metadata": {}
+        }
+      ]
+    },
+    "flu": {
+      "forked_from": "main",
+      "nodes": [
+        {
+          "id": "486a403f",
+          "parent_id": null,
+          "role": "user",
+          "content": "Hello, I have a headache.",
+          "timestamp": "2026-04-28T15:30:20.161194",
+          "metadata": {}
+        },
+        {
+          "id": "9f06af7a",
+          "parent_id": "486a403f",
+          "role": "assistant",
+          "content": "Based on your symptoms, it could be ORVI or Flu. Shall we explore ORVI first?",
+          "timestamp": "2026-04-28T15:30:20.162196",
+          "metadata": {}
+        },
+        {
+          "id": "b4b01d4f",
+          "parent_id": "9f06af7a",
+          "role": "user",
+          "content": "Yes.",
+          "timestamp": "2026-04-28T15:31:55.696605",
+          "metadata": {}
+        },
+        {
+          "id": "507eb181",
+          "parent_id": "b4b01d4f",
+          "role": "assistant",
+          "content": "I understand. Let's continue exploring this branch.",
+          "timestamp": "2026-04-28T15:31:55.697595",
+          "metadata": {}
+        },
+        {
+          "id": "04a6d587",
+          "parent_id": "507eb181",
+          "role": "user",
+          "content": "mybe I flu",
+          "timestamp": "2026-04-28T15:34:09.519768",
+          "metadata": {}
+        },
+        {
+          "id": "6cb6b335",
+          "parent_id": "04a6d587",
+          "role": "assistant",
+          "content": "Flu usually starts suddenly with high fever. Rest is crucial. Check saturation.",
+          "timestamp": "2026-04-28T15:34:09.521072",
+          "metadata": {}
+        },
+        {
+          "id": "c7603f53",
+          "parent_id": "6cb6b335",
+          "role": "user",
+          "content": "Hi, I'm not feeling well, my head hurts, what could it be?",
+          "timestamp": "2026-04-28T16:14:40.312801",
+          "metadata": {}
+        },
+        {
+          "id": "e7f579ce",
+          "parent_id": "c7603f53",
+          "role": "assistant",
+          "content": "Based on your symptoms, it could be ORVI or Flu. Shall we explore ORVI first?",
+          "timestamp": "2026-04-28T16:14:40.314626",
+          "metadata": {}
+        },
+        {
+          "id": "468fc177",
+          "parent_id": "e7f579ce",
+          "role": "user",
+          "content": "Yes, let's start with the orvi",
+          "timestamp": "2026-04-28T16:16:20.544097",
+          "metadata": {}
+        },
+        {
+          "id": "b5f722ee",
+          "parent_id": "468fc177",
+          "role": "assistant",
+          "content": "For ORVI, check your throat and keep a temperature diary. Drink plenty of fluids.",
+          "timestamp": "2026-04-28T16:16:20.545738",
+          "metadata": {}
+        },
+        {
+          "id": "aadf3ad3",
+          "parent_id": "b5f722ee",
+          "role": "user",
+          "content": "Maybe I do have a flu?",
+          "timestamp": "2026-04-28T16:18:00.711498",
+          "metadata": {}
+        },
+        {
+          "id": "21d49012",
+          "parent_id": "aadf3ad3",
+          "role": "assistant",
+          "content": "Flu usually starts suddenly with high fever. Rest is crucial. Check saturation.",
+          "timestamp": "2026-04-28T16:18:00.713669",
+          "metadata": {}
+        }
+      ]
+    }
+  }
+}
