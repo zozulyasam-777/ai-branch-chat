@@ -9,6 +9,7 @@ import os
 import uuid
 from datetime import datetime
 from typing import Dict, List, Optional, Any
+from anonymizer import SimpleAnonymizer
 
 class ConversationManager:
     """
@@ -18,8 +19,15 @@ class ConversationManager:
     
     def __init__(self, session_file: str):
         self.session_file = session_file
+        self.config = config or {}        
         self.data = self._load_or_create_session()
         self.current_branch = self.data.get("meta", {}).get("current_branch", "main")
+
+        # Initialize anonymizer
+        privacy_config = self.config.get('privacy', {})
+        session_id = privacy_config.get('session_id', 'default')
+        self.anonymizer = SimpleAnonymizer(privacy_config)
+        self.session_id = session_id
 
     def _load_or_create_session(self) -> Dict:
         """
@@ -152,3 +160,73 @@ class ConversationManager:
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(feed_json, f, indent=2, ensure_ascii=False)
+
+    def add_node(self, role: str, content: str, branch: Optional[str] = None, 
+                 metadata: Optional[Dict] = None) -> str:
+        """
+        Adds a new message node to the current branch.
+        Now includes anonymization metadata.
+        """
+        if branch is None:
+            branch = self.current_branch
+
+        if branch not in self.data["branches"]:
+            raise ValueError(f"Branch '{branch}' does not exist.")
+
+        nodes = self.data["branches"][branch]["nodes"]
+        parent_id = nodes[-1]["id"] if nodes else None
+        
+        # Anonymize content if enabled
+        anon_content = content
+        token_map = {}
+        
+        if self.config.get('privacy', {}).get('enabled', False):
+            anon_content, token_map = self.anonymizer.anonymize(content, self.session_id)
+        
+        new_node = {
+            "id": str(uuid.uuid4())[:8],
+            "parent_id": parent_id,
+            "role": role,
+            "content": content,              # Original (for local storage)
+            "content_anon": anon_content,    # Anonymized (for AI API)
+            "timestamp": datetime.now().isoformat(),
+            "metadata": metadata or {},
+            "token_map": token_map           # For reverse mapping
+        }
+        
+        nodes.append(new_node)
+        self.save()
+        return new_node["id"]
+    
+    def get_context_for_ai(self, anonymized: bool = True) -> List[Dict]:
+        """
+        Prepares the message history for the AI API.
+        
+        Args:
+            anonymized: If True, return anonymized content; else original
+        """
+        nodes = self.data["branches"][self.current_branch]["nodes"]
+        context = []
+        
+        for n in nodes:
+            content_key = "content_anon" if anonymized else "content"
+            context.append({
+                "role": n["role"],
+                "content": n.get(content_key, n["content"])
+            })
+        
+        return context
+    
+    def deanonymize_response(self, text: str) -> str:
+        """
+        Restore original values in AI response.
+        """
+        if not self.config.get('privacy', {}).get('enabled', False):
+            return text
+        return self.anonymizer.deanonymize(text, self.session_id)
+    
+    def get_privacy_stats(self) -> Dict:
+        """
+        Get anonymization statistics for current session.
+        """
+        return self.anonymizer.get_stats(self.session_id)

@@ -40,11 +40,21 @@ class MockAIProvider:
 
 class ChatInterface:
     def __init__(self, session_file="data/session.json"):
+        with open('config.json', 'r', encoding='utf-8') as f:
+            self.config = json.load(f)        
         self.manager = ConversationManager(session_file)
-        self.ai = MockAIProvider()
+        self.ai = MockAIProvider()")
         self.print("🌿 AI Branching Chat v0.1 started")
         self.print(f"📂 Loaded session: {session_file}")
         self.print(f"🌲 Current branch: [bold]{self.manager.current_branch}[/bold]" if USE_RICH else f"Current branch: {self.manager.current_branch}")
+
+        # Show privacy status
+        if self.config.get('privacy', {}).get('enabled', False):
+            strategy = self.config.get('privacy', {}).get('mask_strategy', 'token')
+            self.print(f"🔒 Privacy: ENABLED (strategy: {strategy})")
+        else:
+            self.print(f"🔓 Privacy: DISABLED")
+
 
     def print(self, text):
         if USE_RICH:
@@ -106,6 +116,40 @@ class ChatInterface:
             self.manager.export_feed(path)
             self.print(f"✅ Exported JSON Feed to {path}")
 
+        elif command == "/privacy":
+            # Toggle or show privacy status
+            if len(parts) < 2:
+                current = self.config.get('privacy', {}).get('enabled', False)
+                self.print(f"Privacy: {'ENABLED' if current else 'DISABLED'}")
+                self.print("Usage: /privacy on|off|stats")
+                return
+            
+            action = parts[1].lower()
+            if action == 'on':
+                self.config['privacy']['enabled'] = True
+                self.print("✅ Privacy enabled")
+            elif action == 'off':
+                self.config['privacy']['enabled'] = False
+                self.print("✅ Privacy disabled")
+            elif action == 'stats':
+                stats = self.manager.get_privacy_stats()
+                self.print(f"📊 Anonymized entities: {stats['total_entities']}")
+                for entity_type, count in stats.get('by_type', {}).items():
+                    self.print(f"   - {entity_type}: {count}")
+            else:
+                self.print("❓ Unknown action. Use: on, off, stats")
+
+        elif command == "/testanon":
+            # Test anonymization without sending to AI
+            if len(parts) < 2:
+                self.print("Usage: /testanon <text>")
+                return
+            test_text = ' '.join(parts[1:])
+            anon_text, token_map = self.manager.anonymizer.anonymize(test_text, self.manager.session_id)
+            self.print(f"Original: {test_text}")
+            self.print(f"Anonymized: {anon_text}")
+            self.print(f"Tokens: {token_map}")
+
         elif command == "/exit":
             sys.exit(0)
         
@@ -123,11 +167,14 @@ class ChatInterface:
         else:
             print(f"You: {text}")
 
-        # 2. Get Context & Generate AI Response
-        context = self.manager.get_context_for_ai()
-        response = self.ai.generate(context)
+        # 2. Get Context (anonymized) & Generate AI Response
+        context = self.manager.get_context_for_ai(anonymized=True)
+        response_anon = self.ai.generate(context)
 
-        # 3. Save AI Message
+        # 3. Deanonymize AI Response
+        response = self.manager.deanonymize_response(response_anon)
+
+        # 4. Save AI Message
         self.manager.add_node("assistant", response)
         if USE_RICH:
             self.print(f"[bold green]AI:[/bold green] {response}")

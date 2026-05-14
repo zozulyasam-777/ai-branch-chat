@@ -35,7 +35,7 @@ A non-linear dialogue interface for LLMs. Explore multiple conversation paths si
 │   Publishers  │
 │ (Readers, Web)│
 └───────────────┘
-
+Configuration
 ### Data Flow
 
 1.  **Input**: You type a message in the CLI.
@@ -50,6 +50,21 @@ A non-linear dialogue interface for LLMs. Explore multiple conversation paths si
 ## 🔌 AI Integration
 
 The program supports multiple AI providers through a simple configuration.
+
+## 🔒 Privacy & Anonymization
+
+This project supports local data anonymization before sending to AI APIs.
+
+### Features
+
+- **Pattern-based detection**: Names, phones, emails, passports, cards
+- **Multiple masking strategies**: Tokens, partial mask, full mask, hash, generalize
+- **Reversible**: Original data stored locally, only anonymized sent to AI
+- **Offline**: No external dependencies for anonymization
+
+
+
+
 
 ### Supported Providers
 
@@ -103,9 +118,7 @@ MIT License. Feel free to fork and experiment!
 ## 💡 Usage Examples
 
 **Start Chatting**:
-    ```bash
-    [main] > Hello, I have a headache.
-    ```
+    ```bashConfiguration
 
 **Create a Branch (Hypothesis)**:
     ```bash
